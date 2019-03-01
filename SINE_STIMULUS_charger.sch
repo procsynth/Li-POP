@@ -1,0 +1,292 @@
+EESchema Schematic File Version 4
+LIBS:SINE_STIMULUS_charger-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 5250 4250 1300 500 
+U 5C77BEB6
+F0 "Power Management" 50
+F1 "power_management.sch" 50
+F2 "LIPO_IN" I L 5250 4450 50 
+F3 "VIN" I L 5250 4350 50 
+F4 "VOUT" O R 6550 4550 50 
+F5 "STAT" O R 6550 4650 50 
+$EndSheet
+$Comp
+L power:GND #PWR0101
+U 1 1 5C77D01B
+P 2700 5100
+F 0 "#PWR0101" H 2700 4850 50  0001 C CNN
+F 1 "GND" H 2705 4927 50  0000 C CNN
+F 2 "" H 2700 5100 50  0001 C CNN
+F 3 "" H 2700 5100 50  0001 C CNN
+	1    2700 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 5100 2700 5000
+Wire Wire Line
+	2600 4950 2600 5000
+Wire Wire Line
+	2600 5000 2700 5000
+Connection ~ 2700 5000
+Wire Wire Line
+	2700 5000 2700 4950
+NoConn ~ 3000 4750
+$Comp
+L Device:Battery BT1
+U 1 1 5C780F6E
+P 3950 4750
+F 0 "BT1" H 4058 4796 50  0000 L CNN
+F 1 "Battery" H 4058 4705 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_3008_1x2450" V 3950 4810 50  0001 C CNN
+F 3 "~" V 3950 4810 50  0001 C CNN
+	1    3950 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 4950 3950 5000
+$Comp
+L Connector:Conn_01x02_Female J3
+U 1 1 5C7810A5
+P 8100 4650
+F 0 "J3" H 7993 4325 50  0000 C CNN
+F 1 "Conn_01x02_Female" H 7993 4416 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x02_P2.54mm_Vertical" H 8100 4650 50  0001 C CNN
+F 3 "~" H 8100 4650 50  0001 C CNN
+	1    8100 4650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6550 4550 7150 4550
+$Comp
+L power:GND #PWR0103
+U 1 1 5C781213
+P 7750 5100
+F 0 "#PWR0103" H 7750 4850 50  0001 C CNN
+F 1 "GND" H 7755 4927 50  0000 C CNN
+F 2 "" H 7750 5100 50  0001 C CNN
+F 3 "" H 7750 5100 50  0001 C CNN
+	1    7750 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4650 6650 4650
+Wire Wire Line
+	6650 4650 6650 5100
+Wire Wire Line
+	6650 5100 6750 5100
+$Comp
+L Device:R R4
+U 1 1 5C781369
+P 6900 5100
+F 0 "R4" V 6693 5100 50  0000 C CNN
+F 1 "300" V 6784 5100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6830 5100 50  0001 C CNN
+F 3 "~" H 6900 5100 50  0001 C CNN
+	1    6900 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7050 5100 7150 5100
+Wire Wire Line
+	7150 5100 7150 4900
+$Comp
+L Device:LED D2
+U 1 1 5C7814CB
+P 7150 4750
+F 0 "D2" V 7188 4632 50  0000 R CNN
+F 1 "CHARGING" V 7097 4632 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 7150 4750 50  0001 C CNN
+F 3 "~" H 7150 4750 50  0001 C CNN
+	1    7150 4750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 4550 7150 4600
+Connection ~ 7150 4550
+Wire Wire Line
+	7150 4550 7900 4550
+Wire Wire Line
+	7750 5100 7750 4650
+Wire Wire Line
+	7750 4650 7900 4650
+$Comp
+L Connector:TestPoint_2Pole TP2
+U 1 1 5C781F57
+P 6450 5500
+F 0 "TP2" H 6450 5695 50  0000 C CNN
+F 1 "TestPoint_2Pole" H 6300 5600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6450 5500 50  0001 C CNN
+F 3 "~" H 6450 5500 50  0001 C CNN
+	1    6450 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 5500 6650 5100
+$Comp
+L power:GND #PWR0104
+U 1 1 5C782139
+P 6150 5600
+F 0 "#PWR0104" H 6150 5350 50  0001 C CNN
+F 1 "GND" H 6155 5427 50  0000 C CNN
+F 2 "" H 6150 5600 50  0001 C CNN
+F 3 "" H 6150 5600 50  0001 C CNN
+	1    6150 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 5600 6150 5500
+Wire Wire Line
+	6150 5500 6250 5500
+Connection ~ 6650 5100
+$Comp
+L Connector:TestPoint_2Pole TP1
+U 1 1 5C782547
+P 4150 5500
+F 0 "TP1" H 4150 5695 50  0000 C CNN
+F 1 "TestPoint_2Pole" H 4000 5600 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4150 5500 50  0001 C CNN
+F 3 "~" H 4150 5500 50  0001 C CNN
+	1    4150 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5C78254E
+P 3850 5600
+F 0 "#PWR0105" H 3850 5350 50  0001 C CNN
+F 1 "GND" H 3855 5427 50  0000 C CNN
+F 2 "" H 3850 5600 50  0001 C CNN
+F 3 "" H 3850 5600 50  0001 C CNN
+	1    3850 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 5600 3850 5500
+Wire Wire Line
+	3850 5500 3950 5500
+Wire Wire Line
+	4350 5500 4400 5500
+Wire Wire Line
+	3000 4350 3100 4350
+Wire Wire Line
+	2700 5000 3100 5000
+$Comp
+L Connector:Conn_01x04_Female J2
+U 1 1 5C783ADE
+P 3350 4650
+F 0 "J2" H 3377 4626 50  0000 L CNN
+F 1 "USB_BO" H 3150 4850 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3350 4650 50  0001 C CNN
+F 3 "~" H 3350 4650 50  0001 C CNN
+	1    3350 4650
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	3150 4450 3100 4450
+Wire Wire Line
+	3100 4450 3100 4350
+Connection ~ 3100 4350
+Wire Wire Line
+	3100 4350 3600 4350
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5C77CF74
+P 2700 4550
+F 0 "J1" H 2755 5017 50  0000 C CNN
+F 1 "USB_B_Micro" H 2755 4926 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 2850 4500 50  0001 C CNN
+F 3 "~" H 2850 4500 50  0001 C CNN
+	1    2700 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 4650 3150 4650
+Wire Wire Line
+	3000 4550 3150 4550
+Wire Wire Line
+	3150 4750 3100 4750
+Wire Wire Line
+	3100 4750 3100 5000
+Connection ~ 3100 5000
+Wire Wire Line
+	3100 5000 3600 5000
+$Comp
+L Device:LED_Small_ALT D3
+U 1 1 5C7853FA
+P 3600 4500
+F 0 "D3" V 3646 4432 50  0000 R CNN
+F 1 "ON" V 3555 4432 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" V 3600 4500 50  0001 C CNN
+F 3 "~" V 3600 4500 50  0001 C CNN
+	1    3600 4500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5C785564
+P 3600 4800
+F 0 "R5" H 3659 4846 50  0000 L CNN
+F 1 "470R" H 3650 4700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 3600 4800 50  0001 C CNN
+F 3 "~" H 3600 4800 50  0001 C CNN
+	1    3600 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4900 3600 5000
+Connection ~ 3600 5000
+Wire Wire Line
+	3600 5000 3950 5000
+Wire Wire Line
+	3600 4700 3600 4600
+Wire Wire Line
+	3600 4400 3600 4350
+Connection ~ 3600 4350
+Text Label 4050 4350 0    50   ~ 0
+V_USB
+Text Label 4050 4550 0    50   ~ 0
+V_LIPO
+Text Label 6800 4550 0    50   ~ 0
+V_OUT
+Text Label 6650 4650 0    50   ~ 0
+STAT
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 1 1 5C792CE7
+P 4850 4550
+F 0 "SW1" H 4850 4200 50  0000 C CNN
+F 1 "POWER" H 4850 4300 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPDT_PCM12" H 4850 4550 50  0001 C CNN
+F 3 "" H 4850 4550 50  0001 C CNN
+	1    4850 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4450 5250 4450
+Wire Wire Line
+	5050 4650 5100 4650
+NoConn ~ 5100 4650
+Wire Wire Line
+	4400 5500 4400 4550
+Wire Wire Line
+	3950 4550 4400 4550
+Connection ~ 4400 4550
+Wire Wire Line
+	4400 4550 4650 4550
+Wire Wire Line
+	3600 4350 5250 4350
+$EndSCHEMATC
